@@ -28,6 +28,11 @@ div#todosProdutos p {
     line-height: 2em;
 }
 
+div span#valor {
+    font-weight: bold;
+    color: rgb(7, 106, 7);
+}
+
 button {
     font-size: 1em;
     background-color: var(--cor3);

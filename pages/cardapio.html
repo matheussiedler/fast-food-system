@@ -17,9 +17,9 @@
     </header>
 
     <nav>
-        <a href="#">Início</a>
-        <a href="pages/cardapio.html" target="_self" rel="next">Cardápio</a>
-        <a href="pages/pagamento.html" target="_self" rel="next">Pagamento</a>
+        <a href="../index.html" target="_self" rel="prev">Início</a>
+        <a href="#">Cardápio</a>
+        <a href="pagamento.html" target="_self" rel="next">Pagamento</a>
     </nav>
 
     <main>
@@ -73,8 +73,7 @@
     <aside id="carrinhoProdutos">
         <h1>Seu carrinho</h1>
         <div id="todosProdutos"></div>
-        <div id="valorTotal"></div>
-        <button onclick="javascript:finalizarCompra()"><a href="#">Finalizar Compra</a></button>
+        <button id="btnToPay" onclick="javascript:finalizarCompra()"><a id="linkToPay" href="" target="_self" rel="next">Finalizar Compra</a></button>
     </aside>
 
     <footer>
@@ -84,7 +83,7 @@
         </div>
         <div id="contatos">
             <ul>
-                <li>&#x1F4CD; <a href="https://www.google.com.br/maps/@-23.1671115,-45.8944721,15z" target="_blank" rel="external">Rua Magrathea, 42</a></li>
+                <li><address>&#x1F4CD; <a href="https://www.google.com.br/maps/@-23.1671115,-45.8944721,15z" target="_blank" rel="external">Rua Magrathea, 42</a></address></li>
                 <li>&#x1F4DE; <a href="tel:+12999999999" target="_blank" rel="external">Tel: (12) 99999-9999</a></li>
             </ul>
         </div> <br><br><br>

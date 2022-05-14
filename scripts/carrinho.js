@@ -59,14 +59,25 @@ function listarProdutos() {
         emoji = '&#x1F37A;'
     } else if (idPTemp == 6) {
         emoji = '&#x1F95B;'
-    }
+    };
 
-    let resultado = `${emoji} ${carrinho[carrinho.length-1]}` + '..........R$' + valores[valores.length-1];
+    let resultado = `${emoji} ${carrinho[carrinho.length-1]}` + '..........<span id="valor">R$' + valores[valores.length-1] + '</span>';
 
     p.innerHTML = resultado;
     lista.appendChild(p);
 }
 
 function finalizarCompra() {
-    window.confirm(`Valor Total R$${valorTotal.toFixed(2)}. Finalizar?`);
+    var botao = window.document.getElementById('btnToPay');
+    var link = window.document.getElementById('linkToPay');
+
+    if (carrinho.length == 0) {
+        link.href="#";
+
+        window.alert('Seu carrinho está vazio!');
+    } else {
+        link.href="pagamento.html";
+
+        var finalizar = window.confirm(`Valor Total R$${valorTotal.toFixed(2)}. Finalizar?`);
+    }
 }
