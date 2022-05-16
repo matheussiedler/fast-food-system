@@ -68,7 +68,6 @@ function listarProdutos() {
 }
 
 function finalizarCompra() {
-    var botao = window.document.getElementById('btnToPay');
     var link = window.document.getElementById('linkToPay');
 
     if (carrinho.length == 0) {
@@ -76,8 +75,10 @@ function finalizarCompra() {
 
         window.alert('Seu carrinho está vazio!');
     } else {
-        link.href="pagamento.html";
-
-        var finalizar = window.confirm(`Valor Total R$${valorTotal.toFixed(2)}. Finalizar?`);
+        var isFinalizado = window.confirm(`Valor Total R$${valorTotal.toFixed(2)}. Finalizar?`);
+        
+        if (isFinalizado) {
+            link.href="pagamento.html";
+        }
     }
 }

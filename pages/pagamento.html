@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/pagamento.css">
     <title>Pagamento</title>
 </head>
 <body>
@@ -24,10 +25,10 @@
     <main>
         <h1>Formas de Pagamento</h1>
         <ul>
-            <li>Dinheiro</li>
-            <li>Débito</li>
-            <li>Crédito</li>
-            <li>Pix</li>
+            <li id="dinheiro" onclick="javascript:formaPagamento(0)">Dinheiro</li>
+            <li id="debito" onclick="javascript:formaPagamento(1)">Débito</li>
+            <li id="credito" onclick="javascript:formaPagamento(2)">Crédito</li>
+            <li id="pix" onclick="javascript:formaPagamento(3)">Pix</li>
         </ul>
     </main>
 
@@ -46,5 +47,24 @@
     </footer>
 
     <script src="../scripts/carrinho.js"></script>
+    <script>
+        function formaPagamento(forma) {
+            const formasPagamento = [
+                'Dinheiro',
+                'Débito',
+                'Crédito',
+                'Pix'
+            ];
+
+            window.alert(`Total da Compra: R$${valorTotal}`);
+
+            window.alert(`Forma de Pagamento: ${formasPagamento[forma]}`);
+            var isFinalizado = window.confirm('Finalizar pagamento?');
+
+            if (isFinalizado) {
+                window.location.replace('https://matheussiedler.github.io/fast-food-system/index.html');
+            }
+        }
+    </script>
 </body>
 </html>
