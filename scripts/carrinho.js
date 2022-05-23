@@ -1,5 +1,5 @@
 const listaProdutos = [
-    "Big Burguer 42",
+    "Colossus Burguer 42",
     "Chicken Burguer 42",
     "Galaxy Burguer 42",
     "Hitchhiker's Burguer 42",

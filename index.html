@@ -6,45 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Burguer 42 - Brasil</title>
 </head>
 <body>
     <header>
-        <img src="images/logo-hamburguer-100.png" alt="Logo da Hamburgueria">
+        <picture>
+            <source media="(max-width: 470px)" srcset="images/logo-hamburguer-80.png" type="image/png">
+            <img src="images/logo-hamburguer-100.png" alt="Logo da Hamburgueria">
+        </picture>
         <h1>Burguer 42</h1>
         <p>Melhor Hamburgueria de São José dos Campos</p>
     </header>
 
-    <nav>
+    <nav class="topnav" id="myTopnav">
         <a href="#">Início</a>
         <a href="pages/cardapio.html" target="_self" rel="next">Cardápio</a>
         <a href="pages/pagamento.html" target="_self" rel="next">Pagamento</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </nav>
 
     <main>
         <h1>Nossos Burguers mais Famosos</h1>
         <a href="pages/cardapio.html" target="_self" rel="next" onclick="javascript:adicionarProduto(0)">
             <div>
-                <img src="images/big-burguer.png" alt="Imagem do Big Burguer 42">
-                <p>Big Burguer 42</p>
+                <picture>
+                    <source media="(max-width: 470px)" srcset="images/big-burguer-210.png" type="image/png">
+
+                    <source media="(max-width: 920px)" srcset="images/big-burguer-150-h.png" type="image/png">
+
+                    <img src="images/big-burguer.png" alt="Imagem do Colossus Burguer 42">
+                </picture>
+
+                <p>Colossus Burguer 42</p>
             </div>
         </a>
         <a href="pages/cardapio.html" target="_self" rel="next" onclick="javascript:adicionarProduto(1)">
             <div>
-                <img src="images/chicken-burguer.png" alt="Imagem do Chicken Burguer 42">
+                <picture>
+                    <source media="(max-width: 470px)" srcset="images/chicken-burguer-210.png" type="image/png">
+
+                    <source media="(max-width: 920px)" srcset="images/chicken-burguer-150-h.png" type="image/png">
+
+                    <img src="images/chicken-burguer.png" alt="Imagem do Chicken Burguer 42">
+                </picture>
+                
                 <p>Chicken Burguer 42</p>
             </div>
         </a>
         <br>
         <a href="pages/cardapio.html" target="_self" rel="next" onclick="javascript:adicionarProduto(2)">
             <div>
-                <img src="images/galaxy-burguer.png" alt="Imagem do Galaxy Burguer 42">
+                <picture>
+                    <source media="(max-width: 470px)" srcset="images/galaxy-burguer-210.png" type="image/png">
+
+                    <source media="(max-width: 920px)" srcset="images/galaxy-burguer-150-h.png" type="image/png">
+
+                    <img src="images/galaxy-burguer.png" alt="Imagem do Galaxy Burguer 42">
+                </picture>
+
                 <p>Galaxy Burguer 42</p>
             </div>
         </a>
         <a href="pages/cardapio.html" target="_self" rel="next" onclick="javascript:adicionarProduto(3)">
             <div>
-                <img src="images/hitchhikers-burguer.png" alt="Imagem do Hitchhiker's Burguer 42">
+                <picture>
+                    <source media="(max-width: 470px)" srcset="images/hitchhikers-burguer-210.png" type="image/png">
+
+                    <source media="(max-width: 920px)" srcset="images/hitchhikers-burguer-150-h.png" type="image/png">
+
+                    <img src="images/hitchhikers-burguer.png" alt="Imagem do Hitchhiker's Burguer 42">
+                </picture>
+
                 <p>Hitchhiker's Burguer 42</p>
             </div>
         </a>
@@ -60,10 +95,11 @@
                 <li><address>&#x1F4CD; <a href="https://www.google.com.br/maps/@-23.1671115,-45.8944721,15z" target="_blank" rel="external">Rua Magrathea, 42</a></address></li>
                 <li>&#x1F4DE; <a href="tel:+12999999999" target="_blank" rel="external">Tel: (12) 99999-9999</a></li>
             </ul>
-        </div> <br><br><br>
+        </div>
         <p>Burguer42 &copy; 2022</p>
     </footer>
 
+    <script src="scripts/topnav.js"></script>
     <script src="scripts/carrinho.js"></script>
 </body>
 </html>
